@@ -1,42 +1,223 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>সুন্দর ফর্ম (Inline CSS)</title>
+    <title>Mister Business</title>
+    <style>
+        /* ===== General Styles ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* ===== Navbar ===== */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #e0f7fa;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00796b;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links li a:hover {
+            color: #004d40;
+        }
+        /* ===== Hero Section ===== */
+        #home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            background: linear-gradient(135deg, #b2ebf2, #4dd0e1);
+            text-align: center;
+            color: #004d40;
+        }
+        #home h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        #home p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background-color: #00796b;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #004d40;
+        }
+        /* ===== Section Styles ===== */
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #00796b;
+        }
+        section p {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+        /* ===== Services ===== */
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .service-box {
+            background-color: #e0f2f1;
+            padding: 30px;
+            border-radius: 10px;
+            flex: 1 1 250px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .service-box h3 {
+            margin-bottom: 15px;
+            color: #004d40;
+        }
+        /* ===== Contact Form ===== */
+        form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 100%;
+        }
+        input[type="submit"] {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #004d40;
+        }
+        /* ===== Footer ===== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #e0f7fa;
+            color: #004d40;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .service-container {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
-<body style="background:#f0f4f8; display:flex; justify-content:center; align-items:center; height:100vh; font-family:Arial, sans-serif;">
+<body>
 
-    <div style="background:#fff; padding:30px 40px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.1); width:100%; max-width:400px;">
-        <h2 style="text-align:center; margin-bottom:25px; color:#333;">আমার সুন্দর ফর্ম</h2>
-        <form action="#" method="post">
-            
-            <label for="name" style="display:block; margin-bottom:6px; font-weight:bold; color:#555;">নাম:</label>
-            <input type="text" id="name" name="name" placeholder="আপনার নাম লিখুন" required 
-                style="width:100%; padding:10px 12px; margin-bottom:15px; border:1px solid #ccc; border-radius:8px; font-size:16px;">
-            
-            <label for="email" style="display:block; margin-bottom:6px; font-weight:bold; color:#555;">ইমেইল:</label>
-            <input type="email" id="email" name="email" placeholder="আপনার ইমেইল লিখুন" required
-                style="width:100%; padding:10px 12px; margin-bottom:15px; border:1px solid #ccc; border-radius:8px; font-size:16px;">
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Mister Business</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-            <label for="phone" style="display:block; margin-bottom:6px; font-weight:bold; color:#555;">ফোন:</label>
-            <input type="tel" id="phone" name="phone" placeholder="আপনার ফোন নম্বর" required
-                style="width:100%; padding:10px 12px; margin-bottom:15px; border:1px solid #ccc; border-radius:8px; font-size:16px;">
+    <!-- Home Section -->
+    <section id="home">
+        <div class="hero">
+            <h1>Welcome to Mister Business</h1>
+            <p>Your trusted partner for amazing services.</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+    </section>
 
-            <label for="password" style="display:block; margin-bottom:6px; font-weight:bold; color:#555;">পাসওয়ার্ড:</label>
-            <input type="password" id="password" name="password" placeholder="পাসওয়ার্ড লিখুন" required
-                style="width:100%; padding:10px 12px; margin-bottom:15px; border:1px solid #ccc; border-radius:8px; font-size:16px;">
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a professional team dedicated to delivering high-quality solutions for your business needs. Our mission is to help your business grow.</p>
+    </section>
 
-            <label for="message" style="display:block; margin-bottom:6px; font-weight:bold; color:#555;">মেসেজ:</label>
-            <textarea id="message" name="message" placeholder="আপনার মেসেজ লিখুন" rows="4" required
-                style="width:100%; padding:10px 12px; margin-bottom:15px; border:1px solid #ccc; border-radius:8px; font-size:16px;"></textarea>
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <h3>Web Development</h3>
+                <p>Build modern, responsive websites that grow your business.</p>
+            </div>
+            <div class="service-box">
+                <h3>Digital Marketing</h3>
+                <p>Increase your online presence and reach the right audience.</p>
+            </div>
+            <div class="service-box">
+                <h3>Graphic Design</h3>
+                <p>Create stunning visuals that captivate your customers.</p>
+            </div>
+        </div>
+    </section>
 
-            <button type="submit" 
-                style="width:100%; padding:12px; background:#007BFF; color:#fff; font-size:18px; border:none; border-radius:8px; cursor:pointer;">
-                সাবমিট করুন
-            </button>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <input type="submit" value="Send Message">
         </form>
-    </div>
+        <p style="text-align:center; margin-top:20px;">
+            Or chat with us directly on WhatsApp: 
+            <a href="https://wa.me/916009858163" target="_blank" style="color:#00796b; font-weight:bold;">6009858163</a>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Mister Business. All rights reserved.
+    </footer>
 
 </body>
 </html>
