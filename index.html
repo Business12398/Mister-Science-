@@ -1,223 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Business</title>
-    <style>
-        /* ===== General Styles ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        /* ===== Navbar ===== */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            background-color: #e0f7fa;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #00796b;
-        }
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links li a:hover {
-            color: #004d40;
-        }
-        /* ===== Hero Section ===== */
-        #home {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 90vh;
-            background: linear-gradient(135deg, #b2ebf2, #4dd0e1);
-            text-align: center;
-            color: #004d40;
-        }
-        #home h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        #home p {
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
-        .btn {
-            background-color: #00796b;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background-color: #004d40;
-        }
-        /* ===== Section Styles ===== */
-        section {
-            padding: 80px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        section h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #00796b;
-        }
-        section p {
-            text-align: center;
-            max-width: 700px;
-            margin: auto;
-        }
-        /* ===== Services ===== */
-        .service-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .service-box {
-            background-color: #e0f2f1;
-            padding: 30px;
-            border-radius: 10px;
-            flex: 1 1 250px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .service-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
-        .service-box h3 {
-            margin-bottom: 15px;
-            color: #004d40;
-        }
-        /* ===== Contact Form ===== */
-        form {
-            max-width: 500px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        input, textarea {
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            width: 100%;
-        }
-        input[type="submit"] {
-            background-color: #00796b;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        input[type="submit"]:hover {
-            background-color: #004d40;
-        }
-        /* ===== Footer ===== */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #e0f7fa;
-            color: #004d40;
-        }
-
-        /* ===== Responsive ===== */
-        @media (max-width: 768px) {
-            .service-container {
-                flex-direction: column;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bazaron</title>
 </head>
-<body>
+<body style="margin:0; font-family:Arial, sans-serif; background-color:#f8f9fa;">
 
-    <!-- Navbar -->
+<!-- Navbar -->
+<header style="background: linear-gradient(90deg, #4CAF50, #81C784); color:white; padding:15px 0;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+    <h1 style="margin:0;">Bazaron</h1>
     <nav>
-        <div class="logo">Mister Business</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <ul id="nav-menu" style="list-style:none; display:flex; gap:15px; margin:10px 0 0 0; padding:0; flex-wrap:wrap;">
+        <li><a href="#" style="color:white; text-decoration:none; font-weight:bold;">হোম</a></li>
+        <li><a href="#" style="color:white; text-decoration:none; font-weight:bold;">প্রোডাক্টস</a></li>
+        <li><a href="#" style="color:white; text-decoration:none; font-weight:bold;">অ্যাবাউট</a></li>
+        <li><a href="#" style="color:white; text-decoration:none; font-weight:bold;">কন্টাক্ট</a></li>
+      </ul>
     </nav>
+  </div>
+</header>
 
-    <!-- Home Section -->
-    <section id="home">
-        <div class="hero">
-            <h1>Welcome to Business</h1>
-            <p>Your trusted partner for amazing services.</p>
-            <a href="#contact" class="btn">Get in Touch</a>
+<!-- Hero Section -->
+<section style="background: linear-gradient(120deg, #A8E6CF, #DCEDC1); text-align:center; padding:50px 20px; border-bottom-left-radius:30px; border-bottom-right-radius:30px;">
+  <h2 style="font-size:2rem; margin-bottom:10px; color:#2E7D32;">Bazaron এ স্বাগতম</h2>
+  <p style="font-size:1.1rem; margin-bottom:20px; color:#2E7D32;">শপিং সহজ ও দ্রুত। নতুন কালেকশন এখনই দেখুন।</p>
+  <a href="#" style="background: linear-gradient(90deg, #388E3C, #66BB6A); color:white; padding:10px 25px; text-decoration:none; border-radius:8px; font-weight:bold;">শপিং শুরু করুন</a>
+</section>
+
+<!-- Products Section -->
+<section style="max-width:1200px; margin:40px auto; padding:0 15px;">
+  <h2 style="text-align:center; margin-bottom:30px; font-size:1.8rem; color:#2E7D32;">আমাদের প্রোডাক্টস</h2>
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:20px;">
+
+    <!-- ২০ Product Card Loop -->
+    <script>
+      const productContainer = document.currentScript.parentElement;
+      for(let i=1;i<=20;i++){
+        const price = 500 + (i-1)*100; // দাম 500,600,700...
+        productContainer.innerHTML += `
+        <div class="product-card" style="border:1px solid #ddd; border-radius:15px; padding:15px; text-align:center; background-color:white; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; margin-bottom:20px;">
+          <img src="https://via.placeholder.com/150" alt="Product ${i}" style="width:100%; border-radius:10px; margin-bottom:10px;">
+          <h3 style="font-size:1.1rem; color:#388E3C;">প্রোডাক্ট ${i}</h3>
+          <p style="font-size:1rem; color:#333;">৳${price}</p>
+          <button onclick="addToCart('প্রোডাক্ট ${i}')" style="background-color:#25D366; color:white; padding:10px 15px; border:none; border-radius:5px; margin-top:10px; cursor:pointer; font-size:0.9rem;">Add to Cart</button>
+          <br>
+          <a href="https://wa.me/916009858163?text=আমি%20প্রোডাক্ট%20${i}%20অর্ডার%20করতে চাই" 
+             onclick="confirmWhatsApp('প্রোডাক্ট ${i}')"
+             style="display:inline-block; background-color:#128C7E; color:white; padding:8px 12px; text-decoration:none; border-radius:5px; margin-top:10px; font-size:0.9rem;">
+             WhatsApp এ অর্ডার
+          </a>
         </div>
-    </section>
+        `;
+      }
+    </script>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are a professional team dedicated to delivering high-quality solutions for your business needs. Our mission is to help your business grow.</p>
-    </section>
+  </div>
+</section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-container">
-            <div class="service-box">
-                <h3>Web Development</h3>
-                <p>Build modern, responsive websites that grow your business.</p>
-            </div>
-            <div class="service-box">
-                <h3>Digital Marketing</h3>
-                <p>Increase your online presence and reach the right audience.</p>
-            </div>
-            <div class="service-box">
-                <h3>Graphic Design</h3>
-                <p>Create stunning visuals that captivate your customers.</p>
-            </div>
-        </div>
-    </section>
+<!-- Footer -->
+<footer style="background-color:#2E7D32; color:white; text-align:center; padding:20px 0; margin-top:40px;">
+  <p style="margin:0;">© 2025 Bazaron. সর্বস্বত্ব সংরক্ষিত।</p>
+</footer>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <input type="submit" value="Send Message">
-        </form>
-        <p style="text-align:center; margin-top:20px;">
-            Or chat with us directly on WhatsApp: 
-            <a href="https://wa.me/916009858163" target="_blank" style="color:#00796b; font-weight:bold;">6009858163</a>
-        </p>
-    </section>
+<!-- JavaScript -->
+<script>
+  function addToCart(productName) {
+    alert(productName + " কার্টে যোগ করা হয়েছে!");
+  }
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2025  Business. All rights reserved.
-    </footer>
+  function confirmWhatsApp(productName) {
+    return confirm("আপনি কি " + productName + " WhatsApp এ অর্ডার করতে চান?");
+  }
+
+  // Optional: Card hover effect
+  const cards = document.querySelectorAll('.product-card');
+  cards.forEach(card => {
+    card.addEventListener('mouseover', () => { card.style.transform = 'scale(1.05)'; });
+    card.addEventListener('mouseout', () => { card.style.transform = 'scale(1)'; });
+  });
+</script>
 
 </body>
 </html>
